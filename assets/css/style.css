@@ -20,6 +20,9 @@ body{
   font-family: var(--font);
 
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   height: 100vh;
   width: 100vw;
@@ -46,7 +49,7 @@ body{
   z-index: 10;
 }
 
-.initial-container #img-initial-container{
+.initial-container img{
   position: absolute;
   width: 80%;
   opacity: 0;
@@ -77,6 +80,117 @@ body{
   animation-name: intro-text;
   animation-delay: 4s;
   animation-duration: 15s;
+}
+
+
+.character-select-container{
+  position: absolute;
+  width: 80vw;
+  height: 80vh;
+  
+  border-radius: 2rem;
+
+  z-index: 20;
+  
+  opacity: 0;
+
+  background-color: var(--color-gray);
+}
+.character-select-container .img-logo-container{
+  width: 30rem;
+  padding: 6rem 0 2rem;
+}
+.change-character{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+
+  height: 7rem;
+
+  margin-bottom: 6rem;
+
+  background-color: var(--color-yellow);
+}
+.change-character #last-sword{
+  transform: rotateY(160deg);
+}
+
+.character-select-container p{
+  font-size: 3rem;
+  font-weight: 700;
+}
+.character-container{
+  width: 35vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  margin: 2rem auto 5rem;
+}
+.square-character div{
+  pointer-events: none;
+}
+
+.square,
+.square-character-win{
+  background-color: var(--color-yellow);
+}
+.square,
+.square-character,
+.square-character-win{
+  width: 150px;
+  height: 150px;
+
+  border-radius: 1rem;
+
+  display: inline-block;
+  position: relative;
+
+  cursor: pointer;
+}
+
+.btn-start{
+  padding: 2rem 3rem;
+
+  font-size: 2.5rem;
+
+  margin-top: 3rem;
+
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  font-weight: 700;
+
+  border: none;
+  border-radius: 1rem;
+
+  cursor: pointer;
+}
+
+.on{
+  background-color: var(--color-yellow-select);
+}
+
+.o,
+.x{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 70%;
+  height: 70%;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.o{
+  background-image: url(../images/yoda.png);
+}
+
+.x{
+  background-image: url(../images/vader.png);
 }
 
 @keyframes logo{

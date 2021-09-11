@@ -4,17 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Star Wars - The Game</title>
   </head>
   <body>
     <div id="initial-container" class="initial-container">
       <audio src="./assets/songs/trilha.ogg" autoplay preload="auto"></audio>
-      <img
-        id="img-initial-container"
-        src="./assets/images/logo-star-wars.png"
-        alt="Star Wars"
-      />
+      <img src="./assets/images/logo-star-wars.png" alt="Star Wars" />
       <div class="intro">
         <p>
           Em uma galáxia <br />
@@ -25,5 +21,35 @@
         </p>
       </div>
     </div>
+
+    <div id="character-container" class="character-select-container">
+      <img
+        class="img-logo-container"
+        src="./assets/images/logo-star-wars.png"
+        alt=""
+      />
+      <div class="change-character">
+        <img src="./assets/images/red-sword.svg" />
+        <p>Escolha o seu lado da Força</p>
+        <img id="last-sword" src="./assets/images/green-sword.svg" />
+      </div>
+      <div class="character-container">
+        <div class="square-character" data-character="0">
+          <div class="o"></div>
+        </div>
+        <div class="square-character" data-character="1">
+          <div class="x"></div>
+        </div>
+      </div>
+      <input
+        class="btn-start"
+        type="button"
+        value="Start Game"
+        onclick="startGame()"
+      />
+    </div>
+
+    <script src="./assets/js/game.js"></script>
+    <script src="./assets/js/interface.js"></script>
   </body>
 </html>
