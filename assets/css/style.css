@@ -85,6 +85,8 @@ body {
 .character-select-container {
   position: absolute;
   width: 80vw;
+  max-width: 900px;
+  
   height: 80vh;
 
   border-radius: 2rem;
@@ -212,6 +214,8 @@ body {
 .victory-container {
   position: absolute;
   width: 80vw;
+  max-width: 900px;
+
   height: 80vh;
 
   display: none;
