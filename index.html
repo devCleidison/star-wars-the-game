@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="initial-container" class="initial-container">
-      <audio src="./assets/songs/trilha.ogg" autoplay preload="auto"></audio>
+      <audio src="./assets/songs/trilha.ogg" autoplay></audio>
       <img src="./assets/images/logo-star-wars.png" alt="Star Wars" />
       <div class="intro">
         <p>
@@ -72,6 +72,27 @@
           <div class="square" id="8"></div>
         </div>
       </section>
+    </div>
+
+    <div class="victory-container">
+      <img
+        id="img-logo-victory"
+        src="./assets/images/logo-star-wars.png"
+        alt=""
+      />
+      <div id="player-win" class="square-player-win" data-personal="0"></div>
+
+      <div class="trofel">
+        <div class="front">
+          <img id="win" src="./assets/images/win.png" alt="" />
+        </div>
+      </div>
+      <input
+          class="btn-start"
+          type="button"
+          value="New Game"
+          onclick="restartGame()"
+        />
     </div>
 
     <script src="./assets/js/game.js"></script>

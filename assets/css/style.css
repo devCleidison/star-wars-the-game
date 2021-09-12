@@ -95,7 +95,8 @@ body {
 
   background-color: var(--color-gray);
 }
-.character-select-container .img-logo-container {
+.character-select-container .img-logo-container,
+#img-logo-victory {
   width: 30rem;
   padding: 6rem 0 2rem;
 }
@@ -132,12 +133,12 @@ body {
 }
 
 .square,
-.square-character-win {
+.square-player-win {
   background-color: var(--color-yellow);
 }
 .square,
 .square-character,
-.square-character-win {
+.square-player-win {
   width: 150px;
   height: 150px;
 
@@ -145,11 +146,19 @@ body {
 
   display: inline-block;
   position: relative;
+}
 
+.square,
+.square-character {
   cursor: pointer;
 }
 
-.btn-start {
+.on {
+  background-color: var(--color-yellow-select);
+}
+
+.btn-start,
+.btn-restart {
   padding: 2rem 3rem;
 
   font-size: 2.5rem;
@@ -166,8 +175,8 @@ body {
   cursor: pointer;
 }
 
-.on {
-  background-color: var(--color-yellow-select);
+.btn-restart {
+  display: none;
 }
 
 .o,
@@ -200,6 +209,50 @@ body {
   margin: 5rem;
 }
 
+.victory-container {
+  position: absolute;
+  width: 80vw;
+  height: 80vh;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 2rem;
+
+  background-color: var(--color-gray);
+}
+.victory-container .square-player-win {
+  margin: 5rem;
+}
+.victory-container #win {
+  width: 100px;
+}
+
+.trofel {
+  position: relative;
+  margin-top: 5rem;
+}
+.front {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.victory-container input {
+  margin-top: 9rem;
+}
+
+.front img {
+  transform-style: preserve-3d;
+  animation: win 5s infinite;
+}
+
 @keyframes logo {
   from {
     width: 100%;
@@ -220,5 +273,14 @@ body {
   to {
     height: 90vh;
     opacity: 1;
+  }
+}
+
+@keyframes win {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
   }
 }

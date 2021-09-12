@@ -1,4 +1,6 @@
 let game = document.getElementsByClassName("game")[0];
+let winScreen = document.getElementsByClassName("victory-container")[0];
+let playerWin = document.getElementById("player-win");
 
 document.addEventListener("DOMContentLoaded", () => {
   let charactersContainer = document.getElementById("character-container");
@@ -44,8 +46,10 @@ function handleClick(event) {
   let symbol = symbols[playerTime];
 
   if (handleMove(position)) {
+    playerWin.innerHTML = `<div class='${symbol}'></div>`;
     setTimeout(() => {
-      game.style.display = "none";
+      game.style.display = 'none';
+      winScreen.style.display = 'flex';
     }, 300);
   }
   updateSquare(position);
@@ -62,7 +66,6 @@ function startGame() {
   let initialContainer =
     document.getElementsByClassName("initial-container")[0];
   let charactersContainer = document.getElementById("character-container");
-  let game = document.getElementsByClassName("game")[0];
 
   game.style.display = "initial";
   charactersContainer.style.display = "none";
@@ -75,6 +78,25 @@ function startGame() {
   squares.forEach((square) => {
     square.innerHTML = "";
   });
+}
 
-  restart.style.display = "none";
+function restartGame() {
+  let charactersContainer = document.getElementById("character-container");
+  let squares = document.querySelectorAll(".square");
+  winScreen.style.display = 'none';
+
+  let characters = document.querySelectorAll(".square-character");
+
+  characters.forEach((character) => {
+    character.style.backgroundColor = "#fce02bde";
+  });
+
+  board = ["", "", "", "", "", "", "", "", ""];
+  playerTime = 0;
+  gameOver = false;
+  squares.forEach((square) => {
+    square.innerHTML = "";
+  });
+
+  charactersContainer.style.display = 'initial';
 }
