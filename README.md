@@ -1,7 +1,7 @@
 # star-wars-the-game
 
 
-[//]: <img src="./assets/images/preview.gif" alt="theme">
+<img src="./assets/images/demo.gif" alt="theme">
 
 > O projeto trata-se de um jogo da valha com a tematica de Star Wars. Nele, você poderá escolher o seu personagem favorito e se divertir com os amigos. Esse projeto está sendo desenvolvido com as tecnologia <strong>HTML5</strong>, <strong>CSS3</strong> e <strong>Javascript</strong>.
 
@@ -12,7 +12,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [X] Design
 - [ ] Resposividade
 - [X] Funcionalidades
-- [ ] Correção de bugs
+- [X] Correção de bugs
 
 
 ## 💻 Pré-requisitos
