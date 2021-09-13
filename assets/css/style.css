@@ -62,6 +62,7 @@ body {
 .intro {
   position: absolute;
 
+  display: none;
   bottom: -26rem;
   perspective: 100px;
 }
@@ -207,8 +208,8 @@ body {
   display: none;
 }
 #img-logo {
-  width: 400px;
-  margin: 5rem;
+  width: 380px;
+  margin: 2rem auto 3rem;
 }
 
 .victory-container {

@@ -1,11 +1,16 @@
 let game = document.getElementsByClassName("game")[0];
 let winScreen = document.getElementsByClassName("victory-container")[0];
 let playerWin = document.getElementById("player-win");
+let introText = document.getElementsByClassName('intro')[0];
 
 document.addEventListener("DOMContentLoaded", () => {
   let charactersContainer = document.getElementById("character-container");
   let characters = document.querySelectorAll(".square-character");
   let squares = document.querySelectorAll(".square");
+
+  setTimeout(() => {
+    introText.style.display = 'initial';
+  }, 1000);
 
   setTimeout(() => {
     charactersContainer.style.opacity = "1";
@@ -84,6 +89,7 @@ function restartGame() {
   let charactersContainer = document.getElementById("character-container");
   let squares = document.querySelectorAll(".square");
   winScreen.style.display = 'none';
+  game.style.display = 'none';
 
   let characters = document.querySelectorAll(".square-character");
 
